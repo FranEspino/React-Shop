@@ -1,9 +1,7 @@
-
 {
   "name": "inicios",
   "version": "0.1.0",
   "private": true,
-  
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -11,6 +9,7 @@
     "ed-grid": "^2.9.0",
     "edteam-style-guides": "^0.0.66",
     "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"

@@ -1,6 +1,31 @@
 import React from 'react';
 import Curso from './curso'
 import "./styles/style.scss"
+import { array } from 'prop-types';
+
+
+const cursos =[
+
+  {
+    title:"Curso de Firebase", 
+    image : "https://edteam-media.s3.amazonaws.com/courses/original/2b50db54-d6b6-4123-8e5a-afbd4f765741.jpg",
+    image_man:"https://instagram.ftru2-3.fna.fbcdn.net/v/t51.2885-15/e35/98069353_705801060254106_2254140806443672640_n.jpg?_nc_ht=instagram.ftru2-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=kR35blvsQ6gAX8YJAz3&oh=72078598d33998f129fab66af943b3e4&oe=5EF695E6",
+    price:"40 SOLES"  
+  },
+  {
+    title:"Curso de C# con MySql" ,
+    image : "https://edteam-media.s3.amazonaws.com/courses/original/bcb63ac0-5dc5-48b7-a111-9974a7fc3bcd.png",
+    image_man:"https://instagram.ftru2-3.fna.fbcdn.net/v/t51.2885-15/e35/98069353_705801060254106_2254140806443672640_n.jpg?_nc_ht=instagram.ftru2-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=kR35blvsQ6gAX8YJAz3&oh=72078598d33998f129fab66af943b3e4&oe=5EF695E6",
+    price:"25 SOLES" 
+  },
+  {
+    title:"Curso de Angular" ,
+    image : "https://edteam-media.s3.amazonaws.com/specialities/original/af23506e-24c8-4633-b813-869e07c108ad.png",
+    image_man:"https://instagram.ftru2-3.fna.fbcdn.net/v/t51.2885-15/e35/98069353_705801060254106_2254140806443672640_n.jpg?_nc_ht=instagram.ftru2-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=kR35blvsQ6gAX8YJAz3&oh=72078598d33998f129fab66af943b3e4&oe=5EF695E6",
+    price:"45 SOLES"
+    
+  }
+]
 
 //component basic with jsx
 const App = () => (
@@ -16,25 +41,14 @@ const App = () => (
       </div>
     </div>
   </div>
- 
 </div>
-
- <div className="ed-grid m-grid-3">
-       <Curso 
-       title="Curso de Mysql con C++" 
-       image = "https://i.ytimg.com/vi/Qz6d7pSDKv8/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDIbD5Em0iZzT96rkWay4FbveCs4A"
-       image_man="https://instagram.ftru2-3.fna.fbcdn.net/v/t51.2885-15/e35/98069353_705801060254106_2254140806443672640_n.jpg?_nc_ht=instagram.ftru2-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=kR35blvsQ6gAX8YJAz3&oh=72078598d33998f129fab66af943b3e4&oe=5EF695E6"
-       price="40 SOLES"  
-       />
-  
-        <Curso 
-       title="Calculadora UI en C++" 
-       image = "https://i.ytimg.com/vi/gi_uggEjNjw/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCsrAgw6dAzvp2r3e5DBiDS9Iq5Eg"
-       image_man="https://instagram.ftru2-3.fna.fbcdn.net/v/t51.2885-15/e35/98069353_705801060254106_2254140806443672640_n.jpg?_nc_ht=instagram.ftru2-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=kR35blvsQ6gAX8YJAz3&oh=72078598d33998f129fab66af943b3e4&oe=5EF695E6"
-       price="25 SOLES"  
-       />
-
-      
+  <div className="ed-grid m-grid-3 s-grid-2">
+    {
+     cursos.map(
+     curso => <Curso title={curso.title} image={curso.image}
+                       price={curso.price} image_man={curso.image_man}
+     />)
+     }
   </div>
 </>
 
